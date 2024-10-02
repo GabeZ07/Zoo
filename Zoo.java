@@ -1,14 +1,17 @@
+
 import java.util.ArrayList;
 
 class Zoo {
     private final ArrayList<Animal> zooList;
     private final ArrayList<Animal> adultList;
     private final ArrayList<Animal> babyList;
+    private final ArrayList<Animal> foodHeld;
 
     public Zoo() {
         zooList = new ArrayList<>();
         adultList = new ArrayList<>();
         babyList = new ArrayList<>();
+        foodHeld = new ArrayList<>();
     }
 
     public void addAnimal(Animal animal) {
@@ -20,6 +23,10 @@ class Zoo {
             babyList.add(animal);
             zooList.add(animal);
         }
+    }
+
+    public void addFood(Food food){
+        foodHeld.add(food);
     }
 
     public void getBabyAnimals(){
@@ -36,11 +43,21 @@ class Zoo {
         }
     }
 
+
     public void feedAnimals() {
-        for (int i=0; i < zooList.size(); i++) {
+        for(int i = 0; i < zooList.get(i); i++){
 
             Animal animal = zooList.get(i);
-            animal.eat();
+            while(animal.caloreisNeeded > animal.caloriesConsumed){
+                for(int j = 0; j < foodHeld.size(i); j++){
+                    animal.eat(food);
+                    foodHeld.remove(i);
+
+                }
+            }
+
+                
         }
+        
     }
 }

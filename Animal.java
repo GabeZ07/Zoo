@@ -1,23 +1,25 @@
-public class Animal {
+
+
+
+public abstract class Animal {
     protected int maturationAge;
     protected double adultWeight;
     protected int currentAge;
+    protected int caloreisNeeded;
+    protected int caloriesConsumed;
 
-    public Animal(int maturationAge, double adultWeight, int currentAge){
+    public Animal(int maturationAge, double adultWeight, int currentAge, int caloreisNeeded, int caloriesConsumed){
         this.maturationAge = maturationAge;
         this.adultWeight = adultWeight;
         this.currentAge = currentAge;
+        this.caloreisNeeded = caloreisNeeded;
+        this.caloriesConsumed = caloriesConsumed;
     }
     
     
-    public void makeSound(){
-        System.out.println("I am an Animal making sound");
+    public abstract String makeSound();
 
-    }
-    public void eat(){
-        System.out.println("I am eating");
-
-    }
+    public abstract void eat(Food food);
 
     public double getDevelopment(){
         double result = (this.currentAge/this.maturationAge);
@@ -28,6 +30,18 @@ public class Animal {
         else{
             return result;
         }
+    }
+
+    public int getCaloriesNeeded(){
+        return (this.caloreisNeeded - this.caloriesConsumed);
+    }
+
+    public int getCaloriesConsumed(){
+        return this.caloriesConsumed;
+    }
+
+    public void sleepAndWakeUp(){
+        this.caloriesConsumed = 0;
     }
 
     public boolean isAdult(){

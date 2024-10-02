@@ -6,8 +6,8 @@ public class Bulldog extends Dog {
 }
 
 @Override
-        public void makeSound() {
-            System.out.println("Bark! I am a Bulldog making a sound.");
+        public String makeSound() {
+            return ("Bark! I am a Bulldog making a sound.");
         }
 
         @Override

@@ -1,18 +1,20 @@
 
-public class Dolphin extends Animal {
+class Dolphin extends Animal {
 
     public Dolphin(int currentAge){
-        super(8, 100, currentAge);
+        super(8, 100, currentAge, 3000, 0);
 
     }
     @Override
-        public void makeSound() {
-            System.out.println("Click! I am a Dolphin making a sound.");
+        public String makeSound() {
+            return ("Click! I am a Dolphin making a sound.");
         }
     @Override
-        public void eat(){
-            System.out.println("im eating");
+    public void eat(Food food){
+        if(food.getVegetarian() == true){
+            caloriesConsumed += 20;
         }
+    }
     @Override
         public String toString(){
             if(isAdult() == true){

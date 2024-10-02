@@ -1,18 +1,18 @@
-public class Dog extends Animal {
+class Dog extends Animal {
     
     
     public Dog(int currentAge){
-        super(2, 45, currentAge);
+        super(2, 45, currentAge, 1000, 0);
 
     }
     
     @Override
-        public void makeSound() {
-            System.out.println("Bark! I am a Dog making a sound.");
+        public String makeSound() {
+            return ("Bark! I am a Dog making a sound.");
         }
     @Override
-        public void eat(){
-            System.out.println("im eating");
+        public void eat(Food food){
+            caloriesConsumed =+ 200;
         }
     @Override
         public String toString(){
