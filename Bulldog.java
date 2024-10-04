@@ -10,7 +10,6 @@ public class Bulldog extends Dog {
             return ("Bark! I am a Bulldog making a sound.");
         }
 
-        @Override
         public void eat(){
             System.out.println("im eating");
         }

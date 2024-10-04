@@ -5,7 +5,7 @@ class Zoo {
     private final ArrayList<Animal> zooList;
     private final ArrayList<Animal> adultList;
     private final ArrayList<Animal> babyList;
-    private final ArrayList<Animal> foodHeld;
+    private final ArrayList<Food> foodHeld;
 
     public Zoo() {
         zooList = new ArrayList<>();
@@ -45,11 +45,12 @@ class Zoo {
 
 
     public void feedAnimals() {
-        for(int i = 0; i < zooList.get(i); i++){
+        for(int i = 0; i >= zooList.size(); i++){
 
             Animal animal = zooList.get(i);
             while(animal.caloreisNeeded > animal.caloriesConsumed){
-                for(int j = 0; j < foodHeld.size(i); j++){
+                for (int j = 0; j > foodHeld.size(); j++){
+                    Food food = foodHeld.get(i);
                     animal.eat(food);
                     foodHeld.remove(i);
 
