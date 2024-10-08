@@ -1,6 +1,8 @@
 
 
 
+
+
 public abstract class Animal {
     protected int maturationAge;
     protected double adultWeight;
@@ -14,6 +16,7 @@ public abstract class Animal {
         this.currentAge = currentAge;
         this.caloreisNeeded = caloreisNeeded;
         this.caloriesConsumed = caloriesConsumed;
+
     }
     
     
@@ -53,6 +56,18 @@ public abstract class Animal {
         double result = age * this.adultWeight;
         return result;
 
+    }
+
+    public int getAge(){
+        int age = this.currentAge;
+        return age;
+    }
+
+    public int age(double numYears){
+        int age = 0;
+        age += this.currentAge;
+        return age;
+       
     }
     
     @Override
